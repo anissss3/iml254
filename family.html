@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Welcome to my little corner of the internet ♡ A collection of memories, dreams, family, friends, education journey and the moments that shaped my life.">
+
+<meta name="keywords"
+content="Anis, personal diary, memories, family, friends, hometown, education, gallery, UiTM student, personal website">
+
+<meta name="author"
+content="Nur Anis Nasrin">
+
+    <title>My Family</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- BACKGROUND -->
+    <div class="background"></div>
+
+    <div class="overlay"></div>
+
+    <!-- HOME -->
+    <section id="home">
+
+        <h1 class="title">
+            My Family ❤︎
+        </h1>
+
+        <p class="subtitle">
+           My family consists of five members, my father (abah), my mother (mama) and two older siblings, 
+           my older brother, my older sister and I'm the youngest. Even though, my siblings and I have quite a big age gap,
+           we still get along well and share a close bond.
+
+        </p>
+
+        <nav>
+
+            <a href="#home">Home</a>
+
+            <a href="#about">About</a>
+
+            <a href="#gallery">Gallery</a>
+
+        </nav>
+
+        <div class="top-section">
+
+            <div class="text-box">
+
+                <h2>Our Story</h2>
+
+                <p>
+                    Family is the most important parts of my life. 
+                    This is our latest family photo, at my sister's graduation. ╰┈➤
+                </p>
+
+            </div>
+
+            <img src="images/family1.jpeg" alt="Family">
+
+        </div>
+
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+
+        <div class="story">
+
+            <img src="images/family2.jpeg" alt="Family Photo">
+
+            <div class="story-text">
+
+                <h2>Beautiful Memories</h2>
+
+                <p>
+                  This photo was taken during Hari Raya Aidilfitri. My family does not usually take family pictures together,
+                  so this picture quite special to me ꫂ❁
+
+                    <br><br>
+
+                    This website is dedicated to preserving
+                    those precious moments together.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery">
+
+        <h2 class="gallery-title">
+            Family Gallery
+        </h2>
+
+        <div class="gallery">
+
+            <img src="images/gallery1.jpeg" title="at my brother's graduation">
+
+            <img src="images/gallery2.jpeg" title="at my sister's graduation">
+
+            <img src="images/gallery3.jpeg" title="my parents">
+
+            <img src="images/gallery4.jpeg" title="baby">
+
+            <img src="images/gallery5.jpeg" title="my siblings">
+
+            <img src="images/gallery6.jpeg" title="my family">
+
+        </div>
+
+    </section>
+
+<!-- MUSIC -->
+        <audio id="bg-music" loop>
+            <source src="audios/night changes.mp3" type="audio/mpeg">
+        </audio>
+
+        <button onclick="toggleMusic()" class="music-btn" id="musicBtn">
+            ▶ Play Music
+        </button>
+
+        </section>
+
+
+<!-- CONTACT -->
+<section id="contact">
+
+        <footer>
+            Family with love ♡
+        </footer>
+
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a href="aboutme.html">About Me</a>
+
+            <a href="interest.html">Personal Interest</a>
+
+            <a href="education.html">Education</a>
+
+            <a href="hometown.html">Hometown</a>
+          
+            <a href="friends.html">Friends</a>
+
+            <a href="gallery.html">Gallery</a>
+
+        </nav>
+
+    </section>
+
+<!-- JAVASCRIPT -->
+    <script>
+
+        const music = document.getElementById("bg-music");
+        const btn = document.getElementById("musicBtn");
+
+        function toggleMusic() {
+
+            if (music.paused) {
+
+                music.play()
+                    .then(() => {
+                        btn.innerText = "⏸ Pause Music";
+                    })
+
+                    .catch(err => {
+                        console.log("Play blocked or error:", err);
+                        alert("Click again — browser blocked autoplay");
+                    });
+
+            } else {
+
+                music.pause();
+                btn.innerText = "▶ Play Music";
+            }
+        }
+
+    </script>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <p>
+        © 2026 Copyright to 𝒂nisss 🌸
+    </p>
+
+    <p>
+        Created with creativity, passion and efforts! ✨
+    </p>
+
+<p>Best viewed using Google Chrome.
+
+</p>
+
+<p>Last Updated: June 2026
+
+</p>
+
+</footer>
+
+
+<!-- ʚɞ BACK TO TOP BUTTON -->
+
+<button id="topBtn" title="Back to top"
+onclick="window.scrollTo({top:0, behavior:'smooth'})">
+🧸
+</button>
+
+
+<!-- ʚɞ SHOW/HIDE SCRIPT -->
+
+<script>
+
+window.onscroll = function () {
+  let btn = document.getElementById("topBtn");
+  if (document.documentElement.scrollTop > 200) {
+    btn.classList.add("show");
+  } else {
+    btn.classList.remove("show");
+  }
+};
+
+</script>
+
+
+</body>
+</html>

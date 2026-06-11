@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Welcome to my little corner of the internet ♡ A collection of memories, dreams, family, friends, education journey and the moments that shaped my life.">
+
+<meta name="keywords"
+content="Anis, personal diary, memories, family, friends, hometown, education, gallery, UiTM student, personal website">
+
+<meta name="author"
+content="Nur Anis Nasrin">
+
+    <title>PersonalInterest</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- BACKGROUND -->
+    <div class="background"></div>
+
+    <!-- MAIN CONTAINER -->
+    <div class="container">
+
+        <!-- HEADER -->
+        <section class="hero">
+
+            <h1>My Personal Interests 𖹭.ᐟ</h1>
+
+            <p>
+                A corner dedicated to the things that fascinate me ☕︎
+            </p>
+
+        </section>
+
+        <!-- INTEREST SECTION -->
+        <section class="interest-section">
+
+            <!-- CARD 1 -->
+            <div class="card">
+                <img src="images/books.jpeg" alt="Books">
+
+                <h2>Reading Books📖</h2>
+
+                <p>
+                    I genuinely enjoy reading books because they help me relax and release tension. 
+                    Recently, I have become really interested in a genre called 'healing fiction.' 
+                    These stories potrays moments of everyday life, personal growth and emotional 
+                    restoration instead of cringe love story.
+                </p>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="card">
+                <img src="images/shoes.jpeg" alt="Shoes">
+
+                <h2>Buying Shoes🩰</h2>
+
+                <p>
+                    One of my personal interest is buying shoes that match my style and mood. 
+                    For me, shoes are just as important as clothes because matching shoes with 
+                    an outfit can make the overall look complete. 
+                </p>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="card">
+                <img src="images/music.jpeg" alt="Music">
+
+                <h2>Listening to Music♬</h2>
+
+                <p>
+                    Listening to music is one of my favorite activities because it helps me relax. 
+                    For me, the most important part of a song is the 
+                    lyrics because meaningful lyrics can express emotions and tell stories.
+                </p>
+            </div>
+
+            <!-- CARD 4 -->
+            <div class="card">
+                <img src="images/photography.jpeg" alt="Photography">
+
+                <h2>Photography[ ◉¯]</h2>
+
+                <p>
+                   Photography is one of my personal interests because I enjoy capturing beautiful moments.
+                   I especially enjoy taking pictures of scenery, nature, and simple aesthetic moments 
+                   because they feel calming and meaningful   (I took this photo myself) •ﻌ•. 
+                </p>
+            </div>
+
+            <!-- CARD 5 -->
+            <div class="card">
+                <img src="images/games.jpeg" alt="Playing Video Games">
+
+                <h2>Playing Video Games🎮</h2>
+
+                <p>
+                   Playing games is my go-to activity to escape from stress. I enjoy it because it helps me relax 
+                   and take a break from my daily routine. Games also make me feel more refreshed 
+                   and help me forget pressure for a while.
+                </p>
+            </div>
+
+        </section>
+
+        <!-- MUSIC -->
+        <audio id="bg-music" loop>
+            <source src="audios/stars.mp3" type="audio/mpeg">
+        </audio>
+
+        <button onclick="toggleMusic()" class="music-btn" id="musicBtn">
+            ▶ Play Music
+        </button>
+
+        <!-- QUOTE -->
+        <section class="quote">
+
+            <h3>
+                “My life would make a good story.”
+            </h3>
+
+        </section>
+
+        <!-- NAVIGATION -->
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a href="aboutme.html">About Me</a>
+
+            <a href="family.html">Family</a>
+
+            <a href="education.html">Education</a>
+
+            <a href="hometown.html">Hometown</a>
+
+            <a href="friends.html">Friends</a>
+
+            <a href="gallery.html">Gallery</a>
+
+        </nav>
+
+    </div>
+
+<!-- JAVASCRIPT -->
+    <script>
+
+        const music = document.getElementById("bg-music");
+        const btn = document.getElementById("musicBtn");
+
+        function toggleMusic() {
+
+            if (music.paused) {
+
+                music.play()
+                    .then(() => {
+                        btn.innerText = "⏸ Pause Music";
+                    })
+
+                    .catch(err => {
+                        console.log("Play blocked or error:", err);
+                        alert("Click again — browser blocked autoplay");
+                    });
+
+            } else {
+
+                music.pause();
+                btn.innerText = "▶ Play Music";
+            }
+        }
+
+    </script>
+
+<!-- FOOTER -->
+<footer>
+
+    <p>
+        © 2026 Copyright to 𝒂nisss 🌸
+    </p>
+
+    <p>
+        Created with creativity, passion and efforts! ✨
+    </p>
+
+<p>Best viewed using Google Chrome.
+
+</p>
+
+<p>Last Updated: June 2026
+
+</p>
+
+</footer>
+
+
+<!-- ʚɞ BACK TO TOP BUTTON -->
+
+<button id="topBtn" title="Back to top"
+onclick="window.scrollTo({top:0, behavior:'smooth'})">
+🧸
+</button>
+
+<!-- ʚɞ SHOW/HIDE SCRIPT -->
+
+<script>
+
+window.onscroll = function () {
+  let btn = document.getElementById("topBtn");
+  if (document.documentElement.scrollTop > 200) {
+    btn.classList.add("show");
+  } else {
+    btn.classList.remove("show");
+  }
+};
+
+</script>
+
+
+</body>
+</html>
